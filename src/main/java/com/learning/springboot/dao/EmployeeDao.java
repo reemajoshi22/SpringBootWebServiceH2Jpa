@@ -1,6 +1,6 @@
 package com.learning.springboot.dao;
 
-import com.learning.springboot.model.Employee;
+import com.learning.springboot.domain.Employee;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

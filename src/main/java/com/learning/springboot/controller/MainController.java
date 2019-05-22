@@ -1,7 +1,7 @@
 package com.learning.springboot.controller;
 
 import com.learning.springboot.dao.EmployeeDao;
-import com.learning.springboot.model.Employee;
+import com.learning.springboot.domain.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
