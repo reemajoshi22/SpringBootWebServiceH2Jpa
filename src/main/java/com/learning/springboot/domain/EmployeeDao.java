@@ -1,5 +1,4 @@
-/*
-package com.learning.springboot.dao;
+package com.learning.springboot.domain;
 
 import com.learning.springboot.domain.Employee;
 import org.springframework.data.repository.CrudRepository;
@@ -9,6 +8,5 @@ import java.util.List;
 
 @Repository
 public interface EmployeeDao extends CrudRepository<Employee,Integer> {
-    public List<Employee> findByEmp_first_name(String name);
+   // public List<Employee> findByEmp_first_name(String name);
 }
-*/
