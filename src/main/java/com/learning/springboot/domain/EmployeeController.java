@@ -11,8 +11,13 @@ public class EmployeeController {
     EmployeeService employeeService;
 
     //@GetMapping("/employee")
-    @RequestMapping(value = "/employee",method = RequestMethod.GET)
-    private List<Employee> getAllEmployee() {
+    @RequestMapping(value = "/employeeList",method = RequestMethod.GET)
+    private List<Employee> getAllEmployeeList() {
+        return employeeService.getAllEmployeeList();
+    }
+
+    @RequestMapping(value = "/employeeString",method = RequestMethod.GET)
+    private String getAllEmployee() {
         return employeeService.getAllEmployee();
     }
 
