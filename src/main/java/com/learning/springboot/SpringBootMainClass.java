@@ -1,8 +1,7 @@
-package com.learning.springboot.domain;
+package com.learning.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Import;
 
 @SpringBootApplication
 //@EntityScan( basePackages = {"com.learning.springboot.main.domain"} )

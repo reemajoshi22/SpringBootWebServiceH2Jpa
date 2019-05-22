@@ -1,4 +1,6 @@
-package com.learning.springboot.domain;
+package com.learning.springboot.controller;
+import com.learning.springboot.domain.Employee;
+import com.learning.springboot.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
