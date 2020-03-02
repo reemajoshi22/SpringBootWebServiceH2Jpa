@@ -1,0 +1,21 @@
+Request URL :  http://localhost:8080/employee
+
+{
+  "emp_id" : "1",
+  "emp_age" : "1",
+  "emp_first_name" : "reema",
+  "emp_last_name":"joshi",
+  "employee_dept" :"pes",
+  "employee_salary":11.0
+}
+xml request
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+   <emp_age>1</emp_age>
+   <emp_first_name>riya</emp_first_name>
+   <emp_id>1</emp_id>
+   <emp_last_name>joshi</emp_last_name>
+   <employee_dept>bio</employee_dept>
+   <employee_salary>1.0</employee_salary>
+</root>
+

@@ -1,3 +1,4 @@
+/*
 package com.learning.springboot.domain;
 
 import com.learning.springboot.service.UserDetailsServiceImpl;
@@ -9,3 +10,4 @@ public class main {
         userDetailsService.loadUserByUsername("test");
     }
 }
+*/

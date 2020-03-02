@@ -1,3 +1,4 @@
+/*
 package com.learning.springboot.service;
 
 import com.learning.springboot.dao.UserDao;
@@ -17,9 +18,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     private UserDao userDao;
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+   */
+/* public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         System.out.println("loadUserByUsername username="+username);
-        Iterable<User> user1=userDao.findAll();
+        Iterable<User> user1=userDao.findByUsername(username);
         ArrayList arrayList=new ArrayList();
 
         Iterator<User> iterator = user1.iterator();
@@ -65,5 +67,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
                 return false;
             }
         };
-    }
+    }*//*
+
 }
+*/

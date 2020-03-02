@@ -2,6 +2,7 @@ package com.learning.springboot.controller;
 import com.learning.springboot.domain.Employee;
 import com.learning.springboot.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,13 +19,14 @@ public class EmployeeController {
         return employeeService.getAllEmployeeList();
     }
 
-    @RequestMapping(value = "/employeeString",method = RequestMethod.GET)
+    @RequestMapping(value = "/employeeString",method = RequestMethod.GET,produces = { "application/json", "application/xml" })
     private String getAllEmployee() {
         return employeeService.getAllEmployee();
     }
 
     //@GetMapping("/employee/{id}")
-    @RequestMapping(value = "/employee/{id}",method = RequestMethod.GET)
+    @RequestMapping(value = "/employee/{id}",method = RequestMethod.GET,
+            produces = { "application/json", "application/xml" })
     private Employee getPerson(@PathVariable("id") int id) {
         return employeeService.getEmployeeById(id);
     }
@@ -36,8 +38,15 @@ public class EmployeeController {
     }
 
     //@PostMapping("/employee")
-    @RequestMapping(value = "/employee",method = RequestMethod.POST)
+    @RequestMapping(value = "/employee", method = RequestMethod.POST,
+            consumes = { "application/json", "application/xml" })
     private int savePerson(@RequestBody Employee employee) {
+        employeeService.saveOrUpdate(employee);
+        return employee.getEmp_id();
+    }
+    @RequestMapping(value = "/employee", method = RequestMethod.PUT,
+            consumes = { "application/json", "application/xml" })
+    private int savePersonUsingPut(@RequestBody Employee employee) {
         employeeService.saveOrUpdate(employee);
         return employee.getEmp_id();
     }
